@@ -1,0 +1,13 @@
+<button [routerLink]="['/']">Home</button>
+<h4>Detail about {{pet.name}}</h4>
+<p>Pet Type: {{pet.type}}</p>
+<p>Pet Description: {{pet.desc}}</p>
+<p>Pet Skills:</p>
+<div *ngFor="let skill of pet.skills">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{skill}}</p>
+</div>
+<p>Likes: {{pet.likes}}</p>
+
+<button *ngIf="showlikes == true" (click)="likePetFromServer(pet._id)">Like this pet</button><button (click)="deletePetFromServer(pet._id)">Adopt this pet!</button>
+
+

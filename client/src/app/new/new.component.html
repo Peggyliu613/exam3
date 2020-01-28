@@ -1,0 +1,19 @@
+<button [routerLink]="['/']">Home</button>
+
+<form (submit)="addPetFromServer()">
+    <div style="color: red;" *ngFor="let err of errorMessage">{{err}}</div>
+    Pet Name:<br>
+    <input type="text" name="name" [(ngModel)]="newPet.name"><br>
+    Pet Type:<br>
+    <input type="text" name="type" [(ngModel)]="newPet.type"><br>
+    Description:<br>
+    <input type="text" name="desc" [(ngModel)]="newPet.desc"><br>
+    Skills:<br>
+    &nbsp;&nbsp; Skill1:
+    <input type="text" name="skill1" [(ngModel)]="newPet.skill1"><br>
+    &nbsp;&nbsp; Skill2:
+    <input type="text" name="skill2" [(ngModel)]="newPet.skill2"><br>
+    &nbsp;&nbsp; Skill3:
+    <input type="text" name="skill3" [(ngModel)]="newPet.skill3"><br><br>
+    <input type="submit" value="Add pet"><button [routerLink]="['/']">Cancel</button>
+</form>
